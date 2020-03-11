@@ -7,7 +7,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "_"
+          "value": "*"
         },
         {
           "key": "Access-Control-Allow-Headers",
