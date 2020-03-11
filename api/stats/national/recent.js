@@ -1,11 +1,9 @@
 const axios = require('axios');
 const csv = require('csvtojson');
 const dayjs = require('dayjs');
-const cors = require('micro-cors');
 
-const handler = async (req, res) => {
+module.exports = async (req, res) => {
   const currentTime = new Date().getHours();
-  console.log(currentTime);
   let date;
   if (currentTime >= 19) {
     date = dayjs().format('YYYYMMDD');
@@ -26,5 +24,3 @@ const handler = async (req, res) => {
     res.status(404).json({ message, success: false });
   }
 };
-
-module.exports = cors(handler);
