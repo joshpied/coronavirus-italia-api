@@ -3,6 +3,10 @@ const csv = require('csvtojson');
 const dayjs = require('dayjs');
 
 module.exports = async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
+
   const currentTime = new Date().getHours();
   console.log(currentTime);
   let date;
