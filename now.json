@@ -3,14 +3,12 @@
   "version": 2,
   "routes": [
     {
-      "src": "/api/national",
-      "dest": "recent.js",
+      "src": "/(._)",
+      "dest": "api/stats/national/recent.js",
       "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "OPTIONS",
-        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+        "Access-Control-Allow-Origin": "*"
       },
-      "methods": ["OPTIONS"]
+      "methods": ["GET", "OPTIONS"]
     }
   ]
 }
