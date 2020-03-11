@@ -9,7 +9,7 @@
         font-family: Arial, Helvetica, sans-serif;
       }
 
-      h1 {
+      h1, h2 {
         text-align: center;
       }
 
@@ -21,8 +21,14 @@
     </style>
   </head>
   <body>
-    <h1>Current Covid-19 Statistics in Italy</h1>
-    <a href="api/cases">Today's cases by region</a>
-    <a href="api/stats">Today's overall statistics</a>
+    <h1>Covid-19 Statistics in Italy API</h1>
+    <h2>National</h2>
+    <a href="api/stats/national">National statistics for every recorded day</a>
+    <a href="api/stats/national/2020-03-10">National statistics for a specified day</a>
+    <a href="api/stats/national/recent">Most recent national statistics</a>
+    <h2>Regional</h2>
+    <a href="api/stats/regional/">Regional statistics for every recorded day</a>
+    <a href="api/stats/regional/2020-03-10">Regional statistics for a specified day</a>
+    <a href="api/stats/regional/recent">Most recent regional cases</a>
   </body>
 </html>
