@@ -1,12 +1,9 @@
 const axios = require('axios');
 const csv = require('csvtojson');
 const dayjs = require('dayjs');
+const cors = require('micro-cors');
 
-module.exports = async (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-
-
+const handler = async (req, res) => {
   const currentTime = new Date().getHours();
   console.log(currentTime);
   let date;
@@ -29,3 +26,5 @@ module.exports = async (req, res) => {
     res.status(404).json({ message, success: false });
   }
 };
+
+module.exports = cors(handler);

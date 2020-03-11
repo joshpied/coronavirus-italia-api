@@ -1,14 +1,4 @@
 {
   "name": "my-mongodb-api",
-  "version": 2,
-  "routes": [
-    {
-      "src": "/(._)",
-      "dest": "api/stats/national/recent.js",
-      "headers": {
-        "Access-Control-Allow-Origin": "*"
-      },
-      "methods": ["GET", "OPTIONS"]
-    }
-  ]
+  "version": 2
 }
