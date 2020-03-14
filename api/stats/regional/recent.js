@@ -4,7 +4,6 @@ const dayjs = require('dayjs');
 
 module.exports = async (req, res) => {
   const currentTime = new Date().getHours();
-  console.log(currentTime);
   let date;
   if (currentTime >= 19) {
     date = dayjs().format('YYYYMMDD');
